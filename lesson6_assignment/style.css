@@ -7,9 +7,42 @@ body {
 	line-height: 1.8em;
 	color: #284141;
 	background-color: #578E8D;
-	padding: 0 40px;
-	border-bottom-color: #799E7B;
+	margin: 0;
+	padding: 0;
+
 }
+header {
+	padding: 0;
+}
+
+#postheader {
+	font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
+	font-size: 15px;
+	line-height: 1.8em;
+	color: #284141;
+	padding: 0 40px;
+	overflow: hidden;
+}
+
+#content {
+	width: 70%;
+}
+
+.sidebar {
+	float: right;
+	border: solid #799E7B;
+	width: 20%;
+	background-color: #77C2C5;
+	padding: 2em;
+	box-shadow: 5px 5px 5px #3d6665;
+	
+}
+
+footer {
+	width: 100%;
+}
+
+
 
 /* basic text styles ----------------------------  */
 p, li, td {
@@ -88,7 +121,7 @@ hr {
 	border: solid #799E7B 2.5px;
 }
 
-img {
+#postheader img {
 	border: solid #799E7B 2.5px;
 
 }
