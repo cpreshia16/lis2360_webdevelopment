@@ -54,7 +54,7 @@ th {
 	border: solid #D0AB5E 1px;
 }
 a:link {
-	color: #2578D5;
+	color: #05B2A8;
 }
 a:visited {
 	color: #2578D5;
@@ -93,6 +93,7 @@ a:hover {
 }
 
 #footer{
+    pointer-events: none;
   	background: url(images/authorpictureblurred.jpg);
   	color: #333;
   	padding: 40px 0 60px 0;	
