@@ -56,12 +56,20 @@ th {
 a:link {
 	color: #05B2A8;
 }
+#footer a:link {
+	text-shadow: 0.125px 0.125px #000;
+}
+
 a:visited {
 	color: #2578D5;
 }
+
 a:hover {
 	color: #4578DF;
 	text-decoration: none;
+}
+p:hover {
+    color: #333;
 }
 
 /* -------------------------- PAGE SECTIONS ---------------------------- */
@@ -93,7 +101,6 @@ a:hover {
 }
 
 #footer{
-    pointer-events: none;
   	background: url(images/authorpictureblurred.jpg);
   	color: #333;
   	padding: 40px 0 60px 0;	
@@ -178,16 +185,6 @@ ul#menu li a.button:hover {
 
 /* ------------------- FOOTER CREDITS --------------------- */
 
-#credits {
-  text-align: center;	
-}
-#credits table{      
-  margin: 0 auto;		/* centers the color palette table */
-}
-#credits p {
-  font-size: .8em;
-  margin: 10px 0;
-}
 
 /* ---------------------- MISC -----------------------------*/
 
