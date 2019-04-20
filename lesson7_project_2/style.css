@@ -92,7 +92,7 @@ a:link:hover {
 
 #stats {
 	padding: 40px 0 60px 0;	
-    background-color: #333;
+  background-color: #333;
 	color: #fff;
 }
 
@@ -110,16 +110,13 @@ a:link:hover {
 
 #footer .half_container {
   margin: auto;
-  width: 50;
+  width: 50%;
 }
 
 #footer a:link {
 	text-shadow: 0.125px 0.125px #000;
 }
 
-#footer p:hover {
-  color: #ff;
-}
 
 /* ---------------- CONTAINER STYLES ----------------- */
 /* Containers are used to keep the page content within bounds centered in the browser window. */
