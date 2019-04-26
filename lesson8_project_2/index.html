@@ -1,0 +1,321 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/carousel/">
+
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <style>
+    /*Body Alterations */
+    body {
+    background-color: rgba(226, 207, 172, 0.8);
+    }
+    /* Carousel Control Buttons Alterations */
+        .carousel-control {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 15%;
+        font-size: 20px;
+        color: #B28C45;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+        filter: alpha(opacity=50);
+        opacity: .5;
+      }
+      /* Navigation bar alterations */
+      .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+          color: #fff;
+          background-color:	#B28C45;
+      }
+      .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+          color: #fff;
+          background-color: #B28C45;
+      }
+      .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+          color: #2F2725;
+          background-color: #B28C45;
+      }
+      .navbar-inverse {
+          background-color: #77685F;        /* change navbar color to brown */
+          border-color: #362f2b;            /* navbar border to darker brown  */
+          border-width: 2px;
+          font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+      }
+      .navbar-inverse .navbar-nav > li > a { 
+          color: #222222; 			       /* change navbar button font color to brighter white */
+      }
+      .navbar-inverse .navbar-brand {
+          color: #2F2725;                   /* change title at left on navbar to brighter white */
+      }
+      @media (min-width: 768px){            /* for large display sizes ... */
+        .navbar-wrapper .navbar {           /* give nav bar rounded ends */
+          border-radius: 30px;
+        }
+        .navbar-wrapper {                   /* pull nav bar to top of display */
+          margin-top: 0px;
+        }
+      }
+      /* Image carousel alterations */
+      .carousel-inner > .item > img {
+        height: auto;                       /* adjust height with image width to prevent image skewing */
+      }
+       @media (max-width: 899px){
+        .carousel {                         /* shorten carousel height on medium size displays */
+          height: 400px;
+        }
+        .carousel .item {
+          height: 400px;
+          background-color: #FFF;
+        }
+       }
+       @media (max-width: 719px){           
+          .carousel-inner > .item > img {   /* keep image at static size on small displays */
+            width: 719px;
+            max-width: 719px;
+            height: 400px;
+          }
+       }
+       
+       /* Carousel image caption button alterations */
+      .btn-primary {
+        color: #2F2725;
+        background-color: #B28C45;
+        border-color: #362f2b;;
+      }
+       .btn-primary:hover {  
+		   color: #fff;                 /* change image caption button font to white on hover */
+          background-color: #FBD93C;        /* change image caption button to gold */
+          border-color: #fff;
+
+        }
+    </style>  
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Beyoncé</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Merchandise</a></li>
+                <li><a href="#">Upcoming Performances</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Music<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Stream</li>
+                    <li><a href="#">Spotify</a></li>
+                    <li><a href="#">Apple Music</a></li>
+                    <li><a href="#">Google Play Music</a></li>
+                    <li><a href="#">Amazon Prime Music</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Watch</li>
+                    <li><a href="#">Netflix</a></li>
+                    <li><a href="#">YouTube</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="images/lemonadestillg.png" alt="First text slide which features a gaussian blurred still of women from Lemonade which includes Zendaya as the background">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Beyonce With the Good Album</h1>
+              <p>Check out Beyonce's most critically acclaimed studio album, <i>Lemonade</i> which spawned the anthems "Formation," "Sorry" and "Hold Up."</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Listen or Watch</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="images/beylouvreg.jpg" width="900px" height ="500px" alt="Second text slide which features a gaussian blurred picture of Beyonce and Jay-Z in front of the Mona Lisa at the Louvre as the background">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Behind the Scenes</h1>
+              <p>Check Out the behind the Scenes videos of some of Beyonce's most iconic videos like Apesh*t filmed at the iconic Louvre.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Watch</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="images/superbowlg.jpg" alt="Third text slide which features a gaussian blurred picture of Beyonce performing at the Superbowl in 2013 as the background">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Watch Beyonce's Best Performances</h1>
+              <p>Watch some of beyonce's most best performances including her first Superbowl Halftime Show.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Watch</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="fourth-slide" src="images/destinyschildg.jpg" alt="Fourt text slide which features a gaussian blurred picture of Destiny's Child as the background">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Destiny's Child: After Destiny's Fufillment</h1>
+              <p>View exclusive behind the scenes videos, and bonus interviews before the release of the upcoming Destiny's Child documentary.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Watch</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/beybusinesswomanc.jpg" alt="Beyonce in a black top with minimalistic makeup making with her arms crossed" width="140" height="140">
+          <h2>Beyonce the Businesswoman</h2>
+          <p>Beyonce is a businesswoman. She has sold millions of records earning her tens of millions of dollars which she then used to catapult her weallth to astronomically levels with smart business decisions, money management skills, wise investments, and a team of accountants. Beyonce maintain full creative control oher brand which she leveraged to broker deals with companies such as Netflix and Pepsi; launch her own altheisure wear brand, Ivy Park; and found an entertainment company (Parkwood Entertainment). Beyonce aims to build generation wealth to pass on to her children, and their children, and so on. in her song "Apesh*t" she states:" My great-great grandchildren already rich / That's a lot of brown children on your Forbes list."   </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">t
+          <img class="img-circle" src="images/beyactivistc.jpg" alt="Beyonce in a green shirt, black lipstick, black pencil skirt, and black beret with the raised fist.   " width="140" height="140">
+          <h2>Beyonce the Activist</h2>
+          <p>Beyonce is an intersectional feminist advocating for the Black community, LGBTQ+ community, and women. She weaves the plights of the black community and women into her art. Her latest studio album, <i>Lemonade</i>, is a celebration of black womanhood. It's a love letter to black women, specifically scorned black women. She uses her wealth, as well as influence to positively afffect organizations representing the black community as well as other disenfranchised communtiies.. She has donated siginficant sums of money to organizations such as Chime for Change, HBCUs, the Survivor Foundation,and Black Lives Matter. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/beyentertainerc.jpg" alt="A picture of Beyonce dancing and smiling with a microphone in the foregorund" width="140" height="140">
+          <h2>Beyonce the Entertainer</h2>
+          <p>Beyonce is a businesswoman, activist, mother, but the role that has capitvated the general public's attachment the most is that of an entertainer. Beyonce is frequently referred to as one of the greatest perfomer of our generation. And, while who exactly has the title is disputed amongst fans most can agree that she is a terrific perfomer. She has put on mesmerizing shows at massive events such as the Superbowl, Coachella, and the Grammy Awards. She has also played at iconic performance venues such as Madison Square Garden, Stade de France, and Wembley Stadium. She combines stellar choreography, incredible vocals, and elaborate sets. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/beytwinsc.png" alt="A picture of Beyonce nude with two of her children, Rumi and Sir, in front of a colorful floral background" width="140" height="140">
+          <h2>Beyonce the Mother</h2>
+          <p>Beyonce is also a mother. Although this role is listed last, Beyonce prioritizes this role the most. She is the mother to three children, Blue Ivy, Rumi, and Sir. According to Beyonce, "I am very protective. I just want to make sure that she can have a healthy, safe, normal life. In the back of my mind, she’s my priority. And life is completely different now. I feel really, really just lucky that I can still do what I love, and now have a way bigger meaning. And that’s to be her mother." However, don't get it twisted. Beyonce is NOT just a mother. You can be a mom (which is already badass) and also be many other badass things as well. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Lemonade<span class="text-muted"> A personal album about betrayal, black womanhood, and forgiveness.</span></h2>
+          <p class="lead">Pray You Catch Me · Hold Up · Don't Hurt Yourself · Sorry · Six Inch · Daddy Lessons · Love Draft · Sandcastles  · Forward · Freedom · All Night · Formation</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="images/lemonadeb.jpg" alt="Beyonce's lemonade album cover">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Homecoming<span class="text-muted"> Beyonce's highly lauded live album recorded at Beychella. </span></h2>
+          <p class="lead">Welcome · Crazy In Love Freedom · Lift Every Voice and Sing · Formation · So Much Damn Swag · Sorry ·Kitty Kat · Bow Down· I Been On · Drunk in Love · Diva · Flawless Feeling Myself · Top Off · 7/11 · Bug A Boo Roll Call <i>and more</i></p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="images/homecomingb.jpg" alt="Beyonce's Homecoming album cover">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">The Writing's on the Wall <span class="text-muted">Throw it back with Destiny's Child 1999 classic.</span></h2>
+          <p class="lead">Intro · The Writing's On the Wall · So Good · Bills, Bills, Bills · Confession · Bugaboo · Temptation · Now That She's Gone · Where'd You Go · Hey Ladies · If You Leave · Jumpin' Jumpin' · Say My Name<i> <br>and more</i></p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="images/writingsonthewallb.jpg" alt="Destiny's child The Writing's On the Wall album cover">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; Elliot Preshia &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>');</script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    
+    <script src="js/holder.min.js"></script>
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
